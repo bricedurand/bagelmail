@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130511134353) do
+ActiveRecord::Schema.define(:version => 20130511142911) do
+
+  create_table "attachments", :force => true do |t|
+    t.integer  "mail_id"
+    t.integer  "index"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "mails", :force => true do |t|
     t.integer  "user_id"

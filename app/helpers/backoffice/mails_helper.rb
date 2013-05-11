@@ -1,0 +1,2 @@
+module Backoffice::MailsHelper
+end
