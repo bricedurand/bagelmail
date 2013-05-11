@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %title= yield(:title)
+    = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "application"
+    = yield(:head)
+  %body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        = link_to 'Backoffice', backoffice_mails_path, class: 'brand'
+        %ul.nav
+          %li= link_to 'Courriers', backoffice_mails_path
+          %li= link_to 'Ajouter un nouveau courrier', new_backoffice_mail_path
+    .container
+      - if notice
+        .alert.alert-success
+          = notice
+      = yield

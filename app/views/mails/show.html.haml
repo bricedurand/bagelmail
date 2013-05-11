@@ -2,8 +2,8 @@
   .span12
     .well
       %h2 Courrier du #{I18n.l @mail.created_at, format: :long}
-      TODO img 1...
-      %br
-      img 2...
-      %br
-      img 3...
+      %ul.thumbnails
+        - for attachment in @mail.attachments
+          %li.span4
+            = link_to attachment.image_url, class: 'thumbnail', target: 'blank' do
+              = image_tag attachment.image_url
