@@ -1,6 +1,6 @@
 class Attachment < ActiveRecord::Base
-  attr_accessible :usermail_id, :index, :image
+  attr_accessible :letter_id, :index, :image
 
-  belongs_to :usermail
+  belongs_to :letter
   mount_uploader :image, AttachmentUploader
 end

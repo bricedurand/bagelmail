@@ -1,41 +1,41 @@
 class Backoffice::LettersController < ApplicationController
   def index
-    @mails = Mail.all
+    @letters = Letter.all
   end
 
   def show
-    @mail = Mail.find(params[:id])
+    @letter = Letter.find(params[:id])
   end
 
   def new
-    @mail = Mail.new
+    @letter = Letter.new
   end
 
   def create
-    @mail = Mail.new(params[:mail])
-    if @mail.save
-      redirect_to [:backoffice, @mail], :notice => "Successfully created mail."
+    @letter = Letter.new(params[:letter])
+    if @letter.save
+      redirect_to [:backoffice, @letter], :notice => "Successfully created mail."
     else
       render :action => 'new'
     end
   end
 
   def edit
-    @mail = Mail.find(params[:id])
+    @letter = Letter.find(params[:id])
   end
 
   def update
-    @mail = Mail.find(params[:id])
-    if @mail.update_attributes(params[:mail])
-      redirect_to [:backoffice, @mail], :notice  => "Successfully updated mail."
+    @letter = Letter.find(params[:id])
+    if @letter.update_attributes(params[:letter])
+      redirect_to [:backoffice, @letter], :notice  => "Successfully updated mail."
     else
       render :action => 'edit'
     end
   end
 
   def destroy
-    @mail = Mail.find(params[:id])
-    @mail.destroy
-    redirect_to backoffice_mails_url, :notice => "Successfully destroyed mail."
+    @letter = Letter.find(params[:id])
+    @letter.destroy
+    redirect_to backoffice_letters_url, :notice => "Successfully destroyed mail."
   end
 end
