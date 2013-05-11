@@ -1,9 +1,9 @@
 BagelMail::Application.routes.draw do
   namespace :backoffice do
-    resources :mails, :attachments
+    resources :letters, :attachments
   end
 
-  resources :mails, path: 'courriers'
+  resources :letters, path: 'courriers'
   resource :account, path: 'mon-compte'
   resource :subscription, path: 'abonnement'
 

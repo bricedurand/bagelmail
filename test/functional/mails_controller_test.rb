@@ -8,7 +8,7 @@ class MailsControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:mails)
+    assert_not_nil assigns(:letters)
   end
 
   test "should get new" do
