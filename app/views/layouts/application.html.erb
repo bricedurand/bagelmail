@@ -23,6 +23,7 @@
         <div class="nav-collapse collapse">
           <p class="navbar-text pull-right">
             Connecté en tant que <a href="<%= account_path %>" class="navbar-link"><%= current_user.email %></a>
+            <%= link_to('Déconnexion', destroy_user_session_path, :method => :delete) %>
           </p>
           <ul class="nav">
             <li class="<%= menu_active 'mails' %>"><%= link_to 'Courriers', mails_path %></li>
