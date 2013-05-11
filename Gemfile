@@ -37,3 +37,4 @@ gem 'haml-rails'
 gem 'aasm'
 gem 'carrierwave'
 gem "fog", "~> 1.3.1"
+gem 'mailjet'

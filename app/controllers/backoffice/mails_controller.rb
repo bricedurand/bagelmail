@@ -1,4 +1,6 @@
 class Backoffice::MailsController < ApplicationController
+  layout 'backoffice'
+
   def index
     @mails = Mail.all
   end
@@ -9,6 +11,7 @@ class Backoffice::MailsController < ApplicationController
 
   def new
     @mail = Mail.new
+    3.times.each { @mail.attachments.build }
   end
 
   def create

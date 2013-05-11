@@ -12,4 +12,8 @@ class User < ActiveRecord::Base
   validates :lastname, presence: true, length: {minimum: 2, maximum: 255}
   validates :phone_number, presence: true, length: {minimum: 2, maximum: 255}
   has_many :mails
+
+  def fullname
+    "#{firstname} #{lastname}"
+  end
 end

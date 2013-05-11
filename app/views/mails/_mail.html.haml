@@ -2,4 +2,7 @@
   %td= check_box_tag :select
   %td= mail.sender
   %td= I18n.l mail.created_at, format: :long
-  %td= link_to 'Ouvrir', mail
+  %td
+    = link_to 'Ouvrir', mail
+    \|
+    = link_to 'Reçevoir', '#'
