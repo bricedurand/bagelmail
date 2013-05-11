@@ -3,7 +3,7 @@ BagelMail::Application.routes.draw do
     resources :mails, :attachments
   end
 
-  resources :mails
+  resources :mails, path: 'courriers'
 
   devise_for :users
 
