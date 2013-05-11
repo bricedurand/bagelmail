@@ -10,7 +10,7 @@ class Letter < ActiveRecord::Base
     state :sent_by_mail
   end
 
-  belongs_to :letter
+  belongs_to :user
   has_many :attachments
 
   accepts_nested_attributes_for :attachments, reject_if: proc { |attributes| attributes['image'].blank? }
