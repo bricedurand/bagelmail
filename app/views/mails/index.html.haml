@@ -7,6 +7,15 @@
           %span.badge= @mails.count
       %li= link_to 'Archive', mails_path
       %li= link_to 'Trash', mails_path
+    .well
+      %h3
+        Mon adresse
+      %p
+        #{current_user.firstname} #{current_user.lastname}
+        %br
+        1 rue du Hackeur
+        %br
+        75000 Paris
   .span9
     .well
       %table.table

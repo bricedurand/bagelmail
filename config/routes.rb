@@ -4,6 +4,8 @@ BagelMail::Application.routes.draw do
   end
 
   resources :mails, path: 'courriers'
+  resource :account, path: 'mon-compte'
+  resource :subscription, path: 'abonnement'
 
   devise_for :users
 

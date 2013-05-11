@@ -1,6 +1,4 @@
 class MailsController < ApplicationController
-  before_filter :authenticate_user!
-
   def index
     @mails = Mail.all
     # @mails = current_user.mails

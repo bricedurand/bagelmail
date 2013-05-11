@@ -22,11 +22,11 @@
 
         <div class="nav-collapse collapse">
           <p class="navbar-text pull-right">
-            Connecté en tant que <a href="#" class="navbar-link"><%= current_user.email %></a>
+            Connecté en tant que <a href="<%= account_path %>" class="navbar-link"><%= current_user.email %></a>
           </p>
           <ul class="nav">
             <li class="<%= menu_active 'mails' %>"><%= link_to 'Courriers', mails_path %></li>
-            <li class="<%= menu_active 'account' %>"><%= link_to 'Abonnement', '#' %></li>
+            <li class="<%= menu_active 'account' %>"><%= link_to 'Abonnement', subscription_path %></li>
             <li class="<%= menu_active 'help' %>"><%= link_to 'Aide', '#' %></li>
           </ul>
         </div>
