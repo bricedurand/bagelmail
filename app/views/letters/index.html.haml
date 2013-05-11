@@ -2,11 +2,11 @@
   .span3
     %ul.nav.nav-tabs.nav-stacked
       %li
-        = link_to mails_path do
+        = link_to letters_path do
           Mailbox
-          %span.badge= @mails.count
-      %li= link_to 'Archive', mails_path
-      %li= link_to 'Trash', mails_path
+          %span.badge= @letters.count
+      %li= link_to 'Archive', letters_path
+      %li= link_to 'Trash', letters_path
     .well
       %h3
         Mon adresse
@@ -28,8 +28,8 @@
             %th Recu le
             %th Action
         %tbody
-          - for mail in @mails
-            = render mail
+          - for letter in @letters
+            = render letter
 
       .pagination
         %ul

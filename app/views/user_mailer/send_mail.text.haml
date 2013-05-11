@@ -1,7 +1,7 @@
 UserMailer#send_mail
 
 = "Bonjour #{user.firstname} #{user.lastname},"
-= "Vous avez reçu un courrier de la part de #{mail.sender}."
+= "Vous avez reçu un courrier de la part de #{letter.sender}."
 
-- mail.attachments.each do |a|
+- letter.attachments.each do |a|
   =link_to a.image
