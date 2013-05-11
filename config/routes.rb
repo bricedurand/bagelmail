@@ -1,6 +1,7 @@
 BagelMail::Application.routes.draw do
-  resources :mails
-
+  namespace :backoffice do
+    resources :mails
+  end
 
   devise_for :users
 
