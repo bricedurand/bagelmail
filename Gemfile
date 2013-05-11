@@ -6,8 +6,9 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 
-
-
+group :test do
+  gem "mocha"
+end
 
 group :development do
   gem 'sqlite3'
@@ -33,6 +34,4 @@ gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
 gem 'haml-rails'
-
-
-gem "mocha", :group => :test
+gem 'aasm'
