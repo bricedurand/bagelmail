@@ -5,9 +5,14 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-gem 'haml-rails'
 
+
+
+
+group :development do
+  gem 'sqlite3'
+  gem 'nifty-generators'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -23,6 +28,8 @@ end
 
 gem 'jquery-rails'
 gem 'devise'
+gem 'haml-rails'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -38,3 +45,5 @@ gem 'devise'
 
 # To use debugger
 # gem 'debugger'
+
+gem "mocha", :group => :test

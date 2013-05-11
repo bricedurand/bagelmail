@@ -1,0 +1,2 @@
+module Backoffice::AttachmentsHelper
+end

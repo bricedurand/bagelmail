@@ -1,0 +1,12 @@
+<%= form_for [:backoffice, @attachment] do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :mail_id %><br />
+    <%= f.number_field :mail_id %>
+  </p>
+  <p>
+    <%= f.label :index %><br />
+    <%= f.number_field :index %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
