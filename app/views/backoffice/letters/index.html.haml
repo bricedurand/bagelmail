@@ -1,0 +1,11 @@
+%h1 Courriers
+
+%table.table.table-bordered
+  %thead
+    %tr
+      %td Expediteur
+      %td Destinataire
+      %td Reçu le
+  %tbody
+    - for mail in @letters
+      = render letter

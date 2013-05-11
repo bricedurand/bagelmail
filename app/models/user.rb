@@ -11,5 +11,11 @@ class User < ActiveRecord::Base
   validates :firstname, presence: true, length: {minimum: 2, maximum: 255}
   validates :lastname, presence: true, length: {minimum: 2, maximum: 255}
   validates :phone_number, presence: true, length: {minimum: 2, maximum: 255}
+
   has_many :letters
+
+
+  def fullname
+    "#{firstname} #{lastname}"
+  end
 end

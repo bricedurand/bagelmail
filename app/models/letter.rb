@@ -1,7 +1,7 @@
 class Letter < ActiveRecord::Base
   include AASM
 
-  attr_accessible :attachment_count, :sender, :state, :user_id
+  attr_accessible :attachment_count, :sender, :state, :user_id, :attachments_attributes
 
   aasm column: 'state' do
     state :scanned, :initial => true
@@ -12,4 +12,7 @@ class Letter < ActiveRecord::Base
 
   belongs_to :letter
   has_many :attachments
+
+  accepts_nested_attributes_for :attachments, reject_if: proc { |attributes| attributes['image'].blank? }
+
 end

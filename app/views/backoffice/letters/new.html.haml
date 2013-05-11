@@ -1,0 +1,23 @@
+%h1 Ajout d'un nouveau courrier
+
+= form_for [:backoffice, @letter], html: {class: 'form form-horizontal'} do |f|
+  = f.error_messages
+
+  .control-group
+    = f.label :sender, 'Expediteur', class: 'control-label'
+    .controls
+      = f.text_field :sender
+
+  .control-group
+    = f.label :user_id, 'Destinataire', class: 'control-label'
+    .controls
+      = f.select :user_id, User.all.collect {|u| [u.fullname, u.id]}
+
+  = f.fields_for :attachments do |a|
+    .control-group
+      = a.label :image, class: 'control-label'
+      .controls
+        = a.file_field :image
+
+  .form-actions
+    = f.submit "Ajouter", confirm: 'Confirmer?', class: 'btn btn-primary'

@@ -1,4 +1,6 @@
 class Backoffice::LettersController < ApplicationController
+  layout 'backoffice'
+
   def index
     @letters = Letter.all
   end
@@ -9,6 +11,7 @@ class Backoffice::LettersController < ApplicationController
 
   def new
     @letter = Letter.new
+    3.times.each { @letter.attachments.build }
   end
 
   def create
