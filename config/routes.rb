@@ -1,8 +1,9 @@
 BagelMail::Application.routes.draw do
-  resources :mails
-
+  namespace :backoffice do
+    resources :mails
+  end
 
   devise_for :users
 
-  #root :to => "home#index"
+  root :to => "home#index"
 end
