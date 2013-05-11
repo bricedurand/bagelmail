@@ -248,3 +248,6 @@ fr:
           address_city: "La ville"
           address_country: "Le pays"
           address_details: "Le complément d'adresse"
+          current_password: "Mot de passe actuel"
+    models:
+       user: "utilisateur"
