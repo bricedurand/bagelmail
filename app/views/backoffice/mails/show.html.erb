@@ -1,25 +1,12 @@
-<p id="notice"><%= notice %></p>
+<% title "Backoffice/Mail" %>
 
 <p>
-  <b>User:</b>
-  <%= @mail.user_id %>
+  <strong>Name:</strong>
+  <%= @mail.name %>
 </p>
 
 <p>
-  <b>Sender:</b>
-  <%= @mail.sender %>
+  <%= link_to "Edit", edit_backoffice_mail_path(@mail) %> |
+  <%= link_to "Destroy", [:backoffice, @mail], :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", backoffice_mails_path %>
 </p>
-
-<p>
-  <b>Attachement count:</b>
-  <%= @mail.attachement_count %>
-</p>
-
-<p>
-  <b>State:</b>
-  <%= @mail.state %>
-</p>
-
-
-<%= link_to 'Edit', edit_mail_path(@mail) %> |
-<%= link_to 'Back', mails_path %>

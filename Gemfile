@@ -5,9 +5,15 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-gem 'haml-rails'
 
+
+
+
+group :development do
+  gem 'sqlite3'
+  gem 'nifty-generators'
+  gem 'better_errors'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -26,3 +32,7 @@ gem 'devise'
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
+gem 'haml-rails'
+
+
+gem "mocha", :group => :test

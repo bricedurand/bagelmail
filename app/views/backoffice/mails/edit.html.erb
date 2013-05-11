@@ -1,6 +1,8 @@
-<h1>Editing mail</h1>
+<% title "Edit Backoffice/Mail" %>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @mail %> |
-<%= link_to 'Back', mails_path %>
+<p>
+  <%= link_to "Show", [:backoffice, @mail] %> |
+  <%= link_to "View All", backoffice_mails_path %>
+</p>

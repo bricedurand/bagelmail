@@ -1,4 +1,4 @@
-class MailsController < ApplicationController
+class Backoffice::MailsController < ApplicationController
   # GET /mails
   # GET /mails.json
   def index
