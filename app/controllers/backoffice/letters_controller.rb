@@ -1,4 +1,5 @@
 class Backoffice::LettersController < ApplicationController
+  http_basic_authenticate_with name: "agent", password: "password"
   layout 'backoffice'
 
   def index
