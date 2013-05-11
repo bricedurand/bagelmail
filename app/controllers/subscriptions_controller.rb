@@ -3,17 +3,19 @@ class SubscriptionsController < ApplicationController
   DESCRIPTION = "Domiciliation du courrier - abonnement mensuel"
 
   def show
-    ppr = PayPal::Recurring.new({
-      :return_url   => thank_you_subscription_url,
-      :cancel_url   => canceled_subscription_url,
-      :ipn_url      => "http://example.com/paypal/ipn",
-      :description  => DESCRIPTION,
-      :amount       => AMOUNT,
-      :currency     => "EUR"
-    })
+    unless current_user.paypal_profile_id.present?
+      ppr = PayPal::Recurring.new({
+        :return_url   => thank_you_subscription_url,
+        :cancel_url   => canceled_subscription_url,
+        :ipn_url      => "http://example.com/paypal/ipn",
+        :description  => DESCRIPTION,
+        :amount       => AMOUNT,
+        :currency     => "EUR"
+      })
 
-    @paypal_response = ppr.checkout
-    redirect_to :back unless @paypal_response.valid?
+      @paypal_response = ppr.checkout
+      redirect_to :back unless @paypal_response.valid?
+    end
   end
 
   def thank_you
@@ -48,7 +50,7 @@ class SubscriptionsController < ApplicationController
       })
 
       response = ppr.create_recurring_profile
-      puts response.profile_id
+      user.update_attribute :paypal_profile_id, response.profile_id
     end
   end
 

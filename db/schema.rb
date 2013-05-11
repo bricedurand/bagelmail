@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(:version => 20130511213404) do
     t.string   "public_id"
     t.string   "paypal_payerid"
     t.string   "paypal_token"
+    t.string   "paypal_profile_id"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

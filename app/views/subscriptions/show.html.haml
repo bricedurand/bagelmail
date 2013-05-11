@@ -1,1 +1,5 @@
-= link_to "Souscrire via PayPal", @paypal_response.checkout_url
+- if @paypal_response
+  %h4 Abonnement à 7,99€/mois pour de la domiciliation postal.
+  = link_to "Souscrire via PayPal", @paypal_response.checkout_url
+- else
+  %h4 Vous avez un abonnement de 7,99€/mois de domiciliation postal.
