@@ -1,0 +1,10 @@
+
+.form-horizontal .field_with_errors {
+    margin: 0;
+    float: left;
+    color: #b94a48;
+}
+.form-horizontal .field_with_errors input {
+    border-color: #b94a48;
+}
+
