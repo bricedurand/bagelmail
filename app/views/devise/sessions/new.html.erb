@@ -2,7 +2,7 @@
   <div class='offset3 span6'>
     <div class='well'>
 
-      <h2>Sign in</h2>
+      <h2>Connexion</h2>
 
       <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), html: {class: 'form-horizontal'}) do |f| %>
           <div class="control-group">
@@ -25,13 +25,13 @@
 
 
                   <%#= f.label :remember_me, class: 'checkbox' %>
-                  <label class="checkbox" for="user_remember_me"> Remember me
+                  <label class="checkbox" for="user_remember_me"> Garder ma session active
                     <%= f.check_box :remember_me %>
                   </label>
 
               <% end -%>
 
-              <div><%= f.submit "Sign in", class: 'btn' %></div>
+              <div><%= f.submit "Connexion", class: 'btn' %></div>
             </div>
           </div>
 
