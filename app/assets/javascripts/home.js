@@ -12,4 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
 //= require bootstrap
+
+$('#slider-carousel').carousel();
+$('#testimonials-carousel').carousel();
