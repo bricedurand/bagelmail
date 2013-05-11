@@ -91,6 +91,8 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mailjet (0.0.3)
+      activesupport (>= 3.1.0)
     metaclass (0.0.1)
     mime-types (1.23)
     mocha (0.13.3)
@@ -173,6 +175,7 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   less-rails
+  mailjet
   mocha
   nifty-generators
   rails (= 3.2.13)
