@@ -13,9 +13,11 @@
       %p
         #{current_user.firstname} #{current_user.lastname}
         %br
-        1 rue du Hackeur
+        #{current_user.address_street} #{current_user.address_details}
         %br
-        75000 Paris
+        #{current_user.address_zipcode} #{current_user.address_city}
+        %br
+        #{current_user.address_country}
   .span9
     .well
       %table.table

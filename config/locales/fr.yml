@@ -186,7 +186,7 @@ fr:
         password_confirmation: "Confirmer le mot de passe"
         remember_me: "Garder ma session active"
         phone_number: "Numéro de téléphone"
-        address_street: "Rue"
+        address_street: "Numéro et rue"
         address_zipcode: "Code postal"
         address_city: "Ville"
         address_country: "Pays"
