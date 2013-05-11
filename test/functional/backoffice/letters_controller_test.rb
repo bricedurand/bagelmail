@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Backoffice::MailsControllerTest < ActionController::TestCase
+class Backoffice::LettersControllerTest < ActionController::TestCase
   def test_index
     get :index
     assert_template 'index'

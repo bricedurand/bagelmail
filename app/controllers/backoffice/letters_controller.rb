@@ -1,4 +1,4 @@
-class Backoffice::MailsController < ApplicationController
+class Backoffice::LettersController < ApplicationController
   def index
     @mails = Mail.all
   end
