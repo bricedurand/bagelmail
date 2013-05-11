@@ -5,9 +5,9 @@ class UserMailer < ActionMailer::Base
   #
   #   en.user_mailer.send_mail.subject
   #
-  def send_mail(user, mail)
+  def send_mail(user, letter)
     @user = user
-    @mail = mail
+    @letter = letter
 
     mail to: @user.email, subject: "[Bagel Mail] Nouveau courrier"
   end

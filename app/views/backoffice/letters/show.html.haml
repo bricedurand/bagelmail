@@ -1,7 +1,7 @@
-%h1 Courrier de #{@mail.sender} à #{@mail.user.try :fullname}
+%h1 Courrier de #{@letter.sender} à #{@letter.user.try :fullname}
 
 %ul.thumbnails
-  - for attachment in @mail.attachments
+  - for attachment in @letter.attachments
     %li.span4
       = link_to attachment.image_url, class: 'thumbnail', target: 'blank' do
         = image_tag attachment.image_url

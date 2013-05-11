@@ -1,0 +1,16 @@
+<% title "Backoffice/Attachment" %>
+
+<p>
+  <strong>Mail:</strong>
+  <%= @attachment.letter_id %>
+</p>
+<p>
+  <strong>Index:</strong>
+  <%= @attachment.index %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_backoffice_attachment_path(@attachment) %> |
+  <%= link_to "Destroy", [:backoffice, @attachment], :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", backoffice_attachments_path %>
+</p>

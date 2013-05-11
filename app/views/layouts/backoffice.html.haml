@@ -8,10 +8,10 @@
   %body
     .navbar.navbar-fixed-top
       .navbar-inner
-        = link_to 'Backoffice', backoffice_mails_path, class: 'brand'
+        = link_to 'Backoffice', backoffice_letters_path, class: 'brand'
         %ul.nav
-          %li= link_to 'Courriers', backoffice_mails_path
-          %li= link_to 'Ajouter un nouveau courrier', new_backoffice_mail_path
+          %li= link_to 'Courriers', backoffice_letters_path
+          %li= link_to 'Ajouter un nouveau courrier', new_backoffice_letter_path
     .container
       - if notice
         .alert.alert-success

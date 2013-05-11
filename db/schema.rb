@@ -14,14 +14,14 @@
 ActiveRecord::Schema.define(:version => 20130511213404) do
 
   create_table "attachments", :force => true do |t|
-    t.integer  "mail_id"
+    t.integer  "letter_id"
     t.integer  "index"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "image"
   end
 
-  create_table "mails", :force => true do |t|
+  create_table "letters", :force => true do |t|
     t.integer  "user_id"
     t.string   "sender"
     t.integer  "attachment_count"
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(:version => 20130511213404) do
     t.datetime "updated_at",       :null => false
   end
 
-  add_index "mails", ["user_id", "created_at"], :name => "index_mails_on_user_id_and_created_at"
+  add_index "letters", ["user_id", "created_at"], :name => "index_letters_on_user_id_and_created_at"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

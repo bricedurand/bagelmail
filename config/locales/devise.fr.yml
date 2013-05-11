@@ -11,6 +11,8 @@ fr:
 
   devise:
     failure:
+      user:
+       not_found_in_database: "Impossible de trouver cet email."
       already_authenticated: "Vous êtes déjà connecté !"
       unauthenticated: "Vous devez vous connecter ou vous inscrire pour continuer."
       unconfirmed: "Vous devez valider votre compte pour continuer."
