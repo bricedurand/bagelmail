@@ -3,6 +3,8 @@ BagelMail::Application.routes.draw do
     resources :mails, :attachments
   end
 
+  resources :mails
+
   devise_for :users
 
   root :to => "home#index"

@@ -1,0 +1,26 @@
+.row
+  .span3
+    %ul.nav.nav-tabs.nav-stacked
+      %li
+        = link_to mails_path do
+          Mailbox
+          %span.badge= @mails.count
+      %li= link_to 'Archive', mails_path
+      %li= link_to 'Trash', mails_path
+  .span9
+    .well
+      %table.table
+        %thead
+          %tr
+            %th Selection
+            %th Expediteur
+            %th Recu le
+        %tbody
+          - for mail in @mails
+            = render mail
+
+      .pagination
+        %ul
+          %li= link_to '<<', '#'
+          %li= link_to '1', '#'
+          %li= link_to '>>', '#'
