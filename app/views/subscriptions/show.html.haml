@@ -1,5 +1,9 @@
 - if @paypal_response
   %h4 Abonnement à 7,99€/mois pour de la domiciliation postal.
-  = link_to "Souscrire via PayPal", @paypal_response.checkout_url
+  = link_to @paypal_response.checkout_url, style: "margin-left: 100px" do
+    = image_tag 'CO_fr_FR_orange_19x24@2x_P.png'
+  %br
+  .secured{style: "margin-top: 120px"}
+  = image_tag 'logo_paypal_paiements_securises_fr.jpg'
 - else
-  %h4 Vous avez un abonnement de 7,99€/mois de domiciliation postal.
+  %h4 Vous avez un abonnement de #{SubscriptionsController::AMOUNT}€/mois de domiciliation postal.
