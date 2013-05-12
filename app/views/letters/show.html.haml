@@ -2,8 +2,19 @@
   .span12
     .well
       %h2 Courrier du #{I18n.l @letter.created_at, format: :long}
-      %ul.thumbnails
-        - for attachment in @letter.attachments
-          %li.span4
-            = link_to attachment.image_url, class: 'thumbnail', target: 'blank' do
+      #letter.carousel.slide
+        %ol.carousel-indicators
+          - @letter.attachments.each_with_index do |attachment, index|
+            %li{'data-target' => '#letter', 'data-slide-to' => index}
+        .carousel-inner
+          - for attachment in @letter.attachments
+            .item
               = image_tag attachment.image_url
+              .carousel-caption
+                = link_to 'Ouvrir', attachment.image_url, target: 'blank'
+        %a.carousel-control.left{'data-slide' => 'prev', href: '#letter'} &lsaquo;
+        %a.carousel-control.right{'data-slide' => 'next', href: '#letter'} &rsaquo;
+
+:coffee
+  $ ->
+    $('#letter').carousel(interval: 99999999)
