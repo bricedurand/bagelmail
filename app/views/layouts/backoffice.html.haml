@@ -8,11 +8,13 @@
   %body
     .navbar.navbar-fixed-top
       .navbar-inner
-        = link_to 'Backoffice', backoffice_letters_path, class: 'brand'
+        = link_to backoffice_letters_path, class: 'brand' do
+          %i.icon-envelope
+          MailOffice.me
         %ul.nav
           %li= link_to 'Courriers', backoffice_letters_path
           %li= link_to 'Ajouter un nouveau courrier', new_backoffice_letter_path
-    .container
+    .container{style: 'padding-top: 70px'}
       - if notice
         .alert.alert-success
           = notice
