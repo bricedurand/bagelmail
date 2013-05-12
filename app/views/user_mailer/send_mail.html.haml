@@ -1,0 +1,11 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv"=>"Content-Type"}
+  %body
+    = "Bonjour #{@letter.user.firstname} #{@letter.user.lastname},"
+    = "Vous avez reçu un courrier de la part de #{@letter.sender}."
+
+    - @letter.attachments.each do |a|
+      %br
+      =image_tag a.image.url
