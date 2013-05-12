@@ -7,8 +7,8 @@
           - @letter.attachments.each_with_index do |attachment, index|
             %li{'data-target' => '#letter', 'data-slide-to' => index}
         .carousel-inner
-          - for attachment in @letter.attachments
-            .item
+          - @letter.attachments.each_with_index do |attachment, index|
+            .item{class: index == 0 ? 'active' : ''}
               = image_tag attachment.image_url
               .carousel-caption
                 = link_to 'Ouvrir', attachment.image_url, target: 'blank'
