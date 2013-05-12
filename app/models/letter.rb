@@ -22,7 +22,11 @@ class Letter < ActiveRecord::Base
     client = DropboxClient.new(session, :app_folder)
 
     for attachment in self.attachments
-      file = File.open(attachment.image.path)
+      if Rails.env.development?
+        file = File.open(attachment.image.path)
+      else
+        file = open(attachment.image.url).read
+      end
       response = client.put_file('/' + attachment.image.to_s.split('/').last, file)
     end
     true
