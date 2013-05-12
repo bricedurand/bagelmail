@@ -1,4 +1,5 @@
 class Backoffice::LettersController < ApplicationController
+  skip_before_filter :authenticate_user!
   http_basic_authenticate_with name: "agent", password: "password"
   layout 'backoffice'
 
