@@ -1,6 +1,7 @@
+# encoding: UTF-8
 class SubscriptionsController < ApplicationController
-  AMOUNT = "7.99"
-  DESCRIPTION = "Domiciliation du courrier - abonnement mensuel"
+  AMOUNT = "6.90"
+  DESCRIPTION = "Domiciliation et dématérialisation du courrier - abonnement mensuel"
 
   def show
     unless current_user.paypal_profile_id.present?
