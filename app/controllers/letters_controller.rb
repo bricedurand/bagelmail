@@ -4,6 +4,6 @@ class LettersController < ApplicationController
   end
 
   def show
-    @letters = current_user.letters.find params[:id]
+    @letter = current_user.letters.find params[:id]
   end
 end
