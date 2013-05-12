@@ -13,9 +13,6 @@
  *= require_tree .
  */
 
-body {
-    padding-top: 50px;
-}
 .navbar-text a {
     color: #999;
 }
