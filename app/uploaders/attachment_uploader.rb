@@ -12,7 +12,11 @@ class AttachmentUploader < CarrierWave::Uploader::Base
 
   # Choose what kind of storage to use for this uploader:
 
-  storage :fog
+  if Rails.env.development?
+    storage :file
+  else
+    storage :fog
+  end
 
   include CarrierWave::MimeTypes
   process :set_content_type
