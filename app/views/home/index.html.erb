@@ -7,7 +7,7 @@
           <% if user_signed_in? %>
           <a class="user-register" href="<%= letters_path %>">Connexion</a>
           <% else %>
-          <a class="user-login" href="<%= new_user_session_path %>">Connexion</a> |
+          <a class="user-login" href="<%= new_user_session_path %>">Connexion</a>
           <a class="user-register" href="<%= new_user_registration_path %>">S'inscrire</a>
           <% end %>
         </div>
@@ -283,7 +283,7 @@
             <!-- Begin MailChimp Signup Form -->
             <div id="mc_embed_signup">
             <form action="http://mailchimp.us7.list-manage.com/subscribe/post?u=a0615cba8df59c694a4896207&amp;id=e033c237d3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
-              
+
               <div class="clear"></div>
               <input id="mce-EMAIL" type="email" name="EMAIL" placeholder="Votre email" required />
               <button type="submit" class="btn-custom" id="mc-embedded-subscribe">Je m'inscris!</button>
