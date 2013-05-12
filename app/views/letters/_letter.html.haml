@@ -3,6 +3,10 @@
   %td= letter.sender
   %td= I18n.l letter.created_at, format: :long
   %td
-    = link_to 'Ouvrir', letter
+    = link_to letter do
+      %i.icon-eye-open
+      Ouvrir
     \|
-    = link_to 'Reçevoir', '#'
+    = link_to '#', confirm: 'Voulez-vous reçevoir votre lettre papier ?' do
+      %i.icon-envelope
+      Reçevoir
