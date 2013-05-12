@@ -251,3 +251,6 @@ fr:
           current_password: "Mot de passe actuel"
     models:
        user: "utilisateur"
+  will_paginate:
+    previous_label: "&#8592; Précédent"
+    next_label: "Suivant &#8594;"

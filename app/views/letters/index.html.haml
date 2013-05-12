@@ -40,8 +40,4 @@
           - for letter in @letters
             = render letter
 
-      .pagination
-        %ul
-          %li= link_to '<<', '#'
-          %li= link_to '1', '#'
-          %li= link_to '>>', '#'
+      = will_paginate @letters

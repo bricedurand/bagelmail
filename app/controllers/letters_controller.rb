@@ -1,11 +1,9 @@
 class LettersController < ApplicationController
   def index
-    @letters = Letter.all
-    # @letters = current_user.letters
+    @letters = current_user.letters.paginate(:page => params[:page])
   end
 
   def show
-    @letter = Letter.find params[:id]
-    # @letters = current_user.letters.find params[:id]
+    @letters = current_user.letters.find params[:id]
   end
 end

@@ -44,3 +44,5 @@ gem "fog", "~> 1.3.1"
 gem 'mailjet'
 gem 'paypal-recurring'
 gem 'quiet_assets'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
