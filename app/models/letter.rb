@@ -16,6 +16,8 @@ class Letter < ActiveRecord::Base
   accepts_nested_attributes_for :attachments, reject_if: proc { |attributes| attributes['image'].blank? }
 
   def upload_to_dropbox
+    return false if user.dropbox_uid.present?
+
     require 'dropbox_sdk'
     session = DropboxSession.new('uyfb3p5lj2z6qpn', 'yjuwb085u0gw1zl')
     session.set_access_token user.dropbox_token, user.dropbox_secret
