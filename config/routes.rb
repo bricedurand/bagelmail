@@ -10,6 +10,8 @@ BagelMail::Application.routes.draw do
     get :canceled
   end
 
+  match "backoffice/letters/:id/send_email" => "backoffice/letters#send_email"
+
   devise_for :users, :controllers => { :registrations => :registrations }
   devise_scope :user do
     get 'connexion', :to => 'devise/sessions#new', :as => :new_user_session

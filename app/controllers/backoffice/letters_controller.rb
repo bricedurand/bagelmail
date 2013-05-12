@@ -42,4 +42,10 @@ class Backoffice::LettersController < ApplicationController
     @letter.destroy
     redirect_to backoffice_letters_url, :notice => "Successfully destroyed mail."
   end
+
+  def send_email
+    @letter = Letter.find(params[:id])
+    UserMailer.send_mail(@letter).deliver
+    redirect_to [:backoffice, @letter], :notice => "email sent"
+  end
 end

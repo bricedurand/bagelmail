@@ -5,3 +5,5 @@
     %li.span4
       = link_to attachment.image_url, class: 'thumbnail', target: 'blank' do
         = image_tag attachment.image_url
+
+=link_to "Send email", { controller: "backoffice/letters", action: "send_email"}, class: "btn"
