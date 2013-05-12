@@ -4,4 +4,4 @@ UserMailer#send_mail
 = "Vous avez reçu un courrier de la part de #{@letter.sender}."
 
 - @letter.attachments.each do |a|
-  =link_to a.image
+  = a.image.url

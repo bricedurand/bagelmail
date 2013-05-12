@@ -11,11 +11,8 @@ class AttachmentUploader < CarrierWave::Uploader::Base
   include Sprockets::Helpers::IsolatedHelper
 
   # Choose what kind of storage to use for this uploader:
-  if Rails.env.development?
-    storage :file
-  else
-    storage :fog
-  end
+
+  storage :fog
 
   include CarrierWave::MimeTypes
   process :set_content_type

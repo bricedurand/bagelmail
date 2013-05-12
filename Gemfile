@@ -14,6 +14,8 @@ group :development do
   gem 'sqlite3'
   gem 'nifty-generators'
   gem 'better_errors'
+  gem 'pry'
+  gem 'pry-debugger'
 end
 
 group :production do
