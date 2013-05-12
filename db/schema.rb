@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130511213404) do
+ActiveRecord::Schema.define(:version => 20130512102826) do
 
   create_table "attachments", :force => true do |t|
     t.integer  "letter_id"
@@ -57,6 +57,9 @@ ActiveRecord::Schema.define(:version => 20130511213404) do
     t.string   "paypal_payerid"
     t.string   "paypal_token"
     t.string   "paypal_profile_id"
+    t.string   "dropbox_uid"
+    t.string   "dropbox_secret"
+    t.string   "dropbox_token"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

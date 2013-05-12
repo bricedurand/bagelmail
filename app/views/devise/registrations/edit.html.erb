@@ -47,6 +47,13 @@
           <div><%= f.submit "Enregistrer", class: 'btn' %></div>
       <% end %>
 
+      <p>
+        <% unless current_user.dropbox_uid.present? %>
+          <%= link_to "Lier mon compte Dropbox", user_omniauth_authorize_path(:dropbox) %>
+        <% else %>
+        Votre compte dropbox est connecté.
+        <% end %>
+      </p>
 
       <%= link_to "Retour", :back %>
 

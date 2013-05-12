@@ -45,6 +45,8 @@ class Backoffice::LettersController < ApplicationController
   end
 
   def send_email
+    @letter.upload_to_dropbox
+
     @letter = Letter.find(params[:id])
     UserMailer.send_mail(@letter).deliver
     redirect_to [:backoffice, @letter], :notice => "email sent"
